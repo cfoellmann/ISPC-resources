@@ -22,6 +22,11 @@ Icons                       | X |   Y
 017_sort_quantity.png         0  -320                                         
 018_settings.png              0  -340                                     
 019_chain_arrow.png           0  -360
+020_script__arrow.png         0  -380
+021_tick_circle_frame.png     0  -400
+022_cross_circle_frame.png    0  -420
+023_client.png                0  -440
+024_linux.png                 0  -460
 
 -----------------------------------------
 -- x24_sprite ---------------------------
