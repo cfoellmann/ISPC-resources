@@ -30,7 +30,7 @@ Icons                       | X |   Y
 
 -----------------------------------------
 -- x24_sprite ---------------------------
-Icons                       |   X |    Y
+Icons                         | X |    Y
 001a_add.png                    0    -12
 001b_add.png                    0    -48                                    
 002a_cancel.png                 0   -108                                          
@@ -40,7 +40,7 @@ Icons                       |   X |    Y
 
 -----------------------------------------
 -- x32_sprite ---------------------------
-Icons                       |   X |    Y
+Icons                         | X |    Y
 001_state_warning.png           0    -14                                          
 002_state_unknown.png           0    -70                                      
 003_state_ok.png                0   -126                                       
