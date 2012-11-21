@@ -1,18 +1,18 @@
 # ISPC-resources for ISPConfig projects
 
 [Info@GitHub](https://github.com/foe-services/ispc-resources) | 
-[Discussion](#) |
+[Discussion](#) | Coming Soon - Keep it here at GitHub for now | 
 [Wiki](https://github.com/foe-services/ispc-resources/wiki) | 
 [Issue-Tracker](https://github.com/foe-services/ispc-resources/issues) | 
-[Foe Services Open-Source-Projects](http://open-source.foe-services.de/)
+[Foe Services Open-Source-Projects](http://labs.foe-services.de/)
 
 1. About
 --------
 - Coming soon
 
-2. Resources/Basis
+2. Content
 ------------------
-- TDB
+    [Guides]()
 
 3. Developers
 -------------
