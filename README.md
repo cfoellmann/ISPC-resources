@@ -13,6 +13,8 @@
 * [Guides](https://github.com/foe-services/ispc-resources/tree/master/guides)
     * [Autodiscover (Outlook) + Autoconfig (Thunderbird)](https://github.com/foe-services/ispc-resources/tree/master/guides/autodiscover)
 
+* [Sprite Generation for ISPConfig-Themes](https://github.com/foe-services/ispc-resources/tree/master/sprite_generation)
+
 ## Developers
 -   Christian Foellmann: [Github](https://github.com/cfoellmann) | [Web](http://www.foe-services.de) | [Mail](mailto:foellmann@foe-services.de)
 
