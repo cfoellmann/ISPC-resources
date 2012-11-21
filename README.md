@@ -10,7 +10,7 @@
 - Coming soon
 
 ## Content
-    [Guides](https://github.com/foe-services/ispc-resources/blob/master/guides/guides.md)
+[Guides](https://github.com/foe-services/ispc-resources/blob/master/guides/guides.md)
 
 ## Developers
 -   Christian Foellmann: [Github](https://github.com/cfoellmann) | [Web](http://www.foe-services.de) | [Mail](mailto:foellmann@foe-services.de)
