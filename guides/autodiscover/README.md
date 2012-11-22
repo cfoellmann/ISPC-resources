@@ -45,3 +45,4 @@ CNAME autoconfig.my-mail.com -> discover.my-service.com
 
 ### Credits
 Tutorial by [Antal Delahaije (admxnl)](http://bugtracker.ispconfig.org/index.php?do=details&task_id=2152#comment3208)
+Edited by [Christian Foellmann (cfoellmann)](https://github.com/cfoellmann)
