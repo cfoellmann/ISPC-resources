@@ -7,31 +7,41 @@
 * my-service.com = The domain you run your "autodiscover" service on
 * my-mail.com = The domain you want to activate autodiscover and autoconfig for
 
-### ISPConfig Config
-1. Add domains:
-    * autodiscover.my-service.com
-    * autoconfig.my-service.com
+### ISPConfig Config (Apache HTTPD)
+* Add domain: `discover.my-service.com`
 
-2. Add Sites > Website:
-    * Domain: autodiscover.my-service.com
-    * Auto-Subdomain = NONE
+* Add Sites > Website with the following settings:
 
-3. Add Sites > Aliasdomain for website
-    * Domain: autoconfig.my-service.com
-    * Parent Website: autodiscover.my-service.com
-    * Redirect Type: No redirect
-    * Auto-Subdomain: NONE
+`Domain: discover.my-service.com`
+
+`Auto-Subdomain = NONE`
+
+`Options > Apache Directives:`
+
+```
+ServerAlias autoconfig.* autodiscover.*
+RewriteEngine On
+RewriteCond %{HTTPS} !on [OR]
+RewriteCond %{HTTP_HOST} !^discover\.my-service\.com$
+RewriteRule ^(.*)$ https://discover.my-service.com$1 [R=301]
+```
 
 Optional:
-4. Do what you do to make the website work with SSL
+* Do what you do to make the website (discover.my-service.com) work with SSL
 
 ### DNS Config
-1. for my-mail.com set
-    * CNAME autodiscover.my-mail.com -> autodiscover.my-service.com
-    * CNAME autoconfig.my-mail.com -> autoconfig.my-service.com
+* for my-mail.com set
 
-### Webserver Config
-#### Apache (HTTPD)
+```
+CNAME autodiscover.my-mail.com -> discover.my-service.com
+CNAME autoconfig.my-mail.com -> discover.my-service.com
+```
+
+### XML files
+* change `autodiscover.xml` and `config-v1.1.xml` to meet your configuration
+
+* copy `autodiscover.xml` to `https://discover.my-service.com/autodiscover/autodiscover.xml`
+* copy `config-v1.1.xml` to `https://discover.my-service.com/mail/config-v1.1.xml`
 
 ### Credits
 Tutorial by [Antal Delahaije (admxnl)](http://bugtracker.ispconfig.org/index.php?do=details&task_id=2152#comment3208)
