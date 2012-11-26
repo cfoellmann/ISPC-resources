@@ -11,15 +11,12 @@
 * Add domain: `discover.my-service.com`
 
 * Add Sites > Website with the following settings:
-
-`Domain: discover.my-service.com`
-
-`Auto-Subdomain = NONE`
-
-`Options > Apache Directives:`
+ * Domain: `discover.my-service.com`
+ * Auto-Subdomain `NONE`
+ * Options > Apache Directives:
 
 ```
-ServerAlias autoconfig.* autodiscover.*
+ServerAlias autoconfig.*
 RewriteEngine On
 RewriteCond %{HTTPS} !on [OR]
 RewriteCond %{HTTP_HOST} !^discover\.my-service\.com$
@@ -32,17 +29,17 @@ Optional:
 ### DNS Config
 * for my-mail.com set
 
-```
-CNAME autodiscover.my-mail.com -> discover.my-service.com
-CNAME autoconfig.my-mail.com -> discover.my-service.com
-```
+* SRV `_autodiscover._tcp.my-mail.com` -> `1 10 443 discover.my-service.com` 
+ * [SRV-Format on Route53:  [priority] [weight] [port] [server host name]]
+* CNAME `autoconfig.my-mail.com` -> `discover.my-service.com`
 
 ### XML files
-* change `autodiscover.xml` and `config-v1.1.xml` to meet your configuration
+* change `autodiscover.php` and `config-v1.1.xml` to meet your configuration
 
-* copy `autodiscover.xml` to `https://discover.my-service.com/autodiscover/autodiscover.xml`
+* copy `.htaccess` to `https://discover.my-service.com/autodiscover/.htaccess`
+* copy `autodiscover.php` to `https://discover.my-service.com/autodiscover/autodiscover.php`
 * copy `config-v1.1.xml` to `https://discover.my-service.com/mail/config-v1.1.xml`
 
 ### Credits
-Tutorial by [Antal Delahaije (admxnl)](http://bugtracker.ispconfig.org/index.php?do=details&task_id=2152#comment3208)
-Edited by [Christian Foellmann (cfoellmann)](https://github.com/cfoellmann)
+* Tutorial by [Antal Delahaije (admxnl)](http://bugtracker.ispconfig.org/index.php?do=details&task_id=2152#comment3208)
+* Edited and modified by [Christian Foellmann (cfoellmann)](https://github.com/cfoellmann)
